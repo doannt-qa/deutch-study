@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function BottomNav() {
   const pathname = usePathname()
@@ -20,10 +19,6 @@ export function BottomNav() {
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-zinc-200">
-      {/* Language switcher strip */}
-      <div className="flex justify-center py-1.5 border-b border-zinc-100">
-        <LanguageSwitcher />
-      </div>
       <div className="flex">
         {navItems.map(({ href, label, icon }) => {
           const active = pathname === href || pathname.startsWith(href + '/')

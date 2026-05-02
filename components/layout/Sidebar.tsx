@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Sidebar() {
   const pathname = usePathname()
@@ -25,11 +24,8 @@ export function Sidebar() {
         <span className="font-bold text-zinc-900 text-lg leading-tight">Deutsch<br /><span className="text-red-600 text-sm font-semibold">Lernen</span></span>
       </Link>
 
-      <div className="px-3 mb-5">
-        <LanguageSwitcher />
-      </div>
 
-      <nav className="flex flex-col gap-1">
+<nav className="flex flex-col gap-1">
         {navItems.map(({ href, label, icon }) => {
           const active = pathname === href || pathname.startsWith(href + '/')
           return (

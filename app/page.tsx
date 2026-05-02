@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useProgressStore } from '@/store/progressStore'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher'
 import type { Level } from '@/types'
 
 export default function HomePage() {
@@ -37,10 +36,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
-        <div className="absolute top-4 right-4">
-          <LanguageSwitcher />
-        </div>
-        <div className="relative max-w-3xl mx-auto px-6 py-20 text-center">
+<div className="relative max-w-3xl mx-auto px-6 py-20 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-6">
             <span>🇩🇪</span>
             <span>{t.landing.badge}</span>

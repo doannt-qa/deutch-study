@@ -16,7 +16,7 @@ export default function HomePage() {
     setLevel(level)
     updateStreak()
     logActivity(new Date().toISOString().slice(0, 10))
-    router.push('/dashboard')
+    router.push('/lessons')
   }
 
   const featureItems = [

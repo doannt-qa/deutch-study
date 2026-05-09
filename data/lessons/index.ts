@@ -348,6 +348,202 @@ export const lessons: Lesson[] = [
       { id: 'mod-q5', question: '"She would like to travel." → ?', options: ['Sie möchte reisen.', 'Sie möchten reisen.', 'Sie kann reisen.', 'Sie reise möchte.'], correct: 0, explanation: '"möchte" for er/sie/es + infinitive at end.' },
     ],
   },
+  {
+    slug: 'numbers',
+    title: 'Numbers & Telling Time',
+    level: 'A1',
+    order: 7,
+    description: 'Count to 1000 and tell the time in German.',
+    icon: '🔢',
+    xpReward: 50,
+    sections: [
+      {
+        type: 'explanation',
+        title: 'Numbers in German',
+        content: 'German numbers follow regular patterns. Numbers 1–12 are unique words; 13–19 follow the pattern [unit]zehn; the tens (20–90) end in -zig or -ßig; compound numbers above 20 put the unit BEFORE the ten with "und": 21 = einundzwanzig.',
+      },
+      {
+        type: 'table',
+        title: 'Numbers 1–10',
+        table: {
+          headers: ['Number', 'German', 'Number', 'German'],
+          rows: [
+            ['1', 'eins / ein-', '6', 'sechs'],
+            ['2', 'zwei', '7', 'sieben'],
+            ['3', 'drei', '8', 'acht'],
+            ['4', 'vier', '9', 'neun'],
+            ['5', 'fünf', '10', 'zehn'],
+          ],
+        },
+      },
+      {
+        type: 'table',
+        title: 'Numbers 11–19 & Tens',
+        table: {
+          headers: ['Number', 'German', 'Number', 'German'],
+          rows: [
+            ['11', 'elf', '20', 'zwanzig'],
+            ['12', 'zwölf', '30', 'dreißig'],
+            ['13', 'dreizehn', '40', 'vierzig'],
+            ['14', 'vierzehn', '50', 'fünfzig'],
+            ['15', 'fünfzehn', '60', 'sechzig'],
+            ['16', 'sechzehn', '70', 'siebzig'],
+            ['17', 'siebzehn', '80', 'achtzig'],
+            ['18', 'achtzehn', '90', 'neunzig'],
+            ['19', 'neunzehn', '100', 'hundert'],
+          ],
+        },
+      },
+      {
+        type: 'tip',
+        content: 'Compound numbers (21–99): unit + und + ten, written as one word. 21 = einundzwanzig, 35 = fünfunddreißig, 99 = neunundneunzig. Note: "eins" shortens to "ein-" in compounds.',
+      },
+      {
+        type: 'table',
+        title: 'Telling the Time',
+        table: {
+          headers: ['Time', 'German', 'Meaning'],
+          rows: [
+            ['3:00', 'Es ist drei Uhr.', 'It is three o\'clock.'],
+            ['3:15', 'Es ist Viertel nach drei.', 'It is quarter past three.'],
+            ['3:30', 'Es ist halb vier.', 'It is half past three. (lit: half four)'],
+            ['3:45', 'Es ist Viertel vor vier.', 'It is quarter to four.'],
+            ['?:??', 'Wie viel Uhr ist es?', 'What time is it?'],
+          ],
+        },
+      },
+      {
+        type: 'examples',
+        examples: [
+          { german: 'Wie viel Uhr ist es? — Es ist halb acht.', english: 'What time is it? — It is half past seven.', highlight: 'halb acht' },
+          { german: 'Das kostet einundzwanzig Euro.', english: 'That costs twenty-one euros.', highlight: 'einundzwanzig' },
+          { german: 'Meine Oma ist zweiundachtzig Jahre alt.', english: 'My grandma is eighty-two years old.', highlight: 'zweiundachtzig' },
+          { german: 'Der Kurs beginnt um Viertel nach neun.', english: 'The course starts at quarter past nine.', highlight: 'Viertel nach neun' },
+        ],
+      },
+    ],
+    quiz: [
+      { id: 'num-q1', question: 'What is 15 in German?', options: ['fünfzehn', 'fünfzig', 'fünf', 'dreizehn'], correct: 0, explanation: '15 = fünfzehn (fünf + zehn).' },
+      { id: 'num-q2', question: 'How do you say 21 in German?', options: ['zwanzigein', 'einzwanzig', 'einundzwanzig', 'zwanzigeins'], correct: 2, explanation: 'Compound numbers: unit + und + ten = einundzwanzig.' },
+      { id: 'num-q3', question: '"Es ist halb vier." means:', options: ['It is four o\'clock.', 'It is half past four.', 'It is half past three.', 'It is quarter past four.'], correct: 2, explanation: '"Halb vier" = half past three (halfway to four).' },
+      { id: 'num-q4', question: 'What is "quarter past two" in German?', options: ['Viertel vor zwei', 'Viertel nach zwei', 'halb zwei', 'halb drei'], correct: 1, explanation: '"Viertel nach" = quarter past: Viertel nach zwei.' },
+      { id: 'num-q5', question: 'How do you ask "What time is it?"', options: ['Wann ist es?', 'Wie viel Uhr ist es?', 'Wie viel Zeit ist es?', 'Welche Zeit ist es?'], correct: 1, explanation: '"Wie viel Uhr ist es?" and "Wie spät ist es?" are both correct.' },
+    ],
+  },
+  {
+    slug: 'sentence-order',
+    title: 'Sentence Structure',
+    level: 'A1',
+    order: 8,
+    description: 'Understand the verb-second rule in German sentences.',
+    icon: '🏗️',
+    xpReward: 50,
+    sections: [
+      {
+        type: 'explanation',
+        title: 'The Verb-Second Rule (V2)',
+        content: 'German is a verb-second (V2) language: the finite (conjugated) verb ALWAYS occupies the second position in a main clause, regardless of what comes first. When a time expression or place starts the sentence, the subject moves after the verb.',
+      },
+      {
+        type: 'table',
+        title: 'Normal vs. Inverted Word Order',
+        table: {
+          headers: ['Position 1', 'Position 2 (Verb)', 'Rest'],
+          rows: [
+            ['Ich', 'lerne', 'jeden Tag Deutsch.'],
+            ['Jeden Tag', 'lerne', 'ich Deutsch. ← inversion'],
+            ['Deutsch', 'lerne', 'ich jeden Tag. ← inversion'],
+            ['Heute', 'arbeite', 'er nicht.'],
+            ['Morgen', 'fahren', 'wir nach Wien.'],
+          ],
+        },
+      },
+      {
+        type: 'rule',
+        content: 'TIME → MANNER → PLACE (TeKaMoLo): When multiple adverbs appear, order them: when (time) → how (manner) → where (place). Example: "Ich fahre morgen (time) schnell (manner) nach Berlin (place)."',
+      },
+      {
+        type: 'tip',
+        content: 'The verb only ever moves between positions — the subject either comes before or directly after it. They always stay close together.',
+      },
+      {
+        type: 'examples',
+        examples: [
+          { german: 'Ich trinke jeden Morgen Kaffee.', english: 'I drink coffee every morning.', highlight: 'trinke' },
+          { german: 'Jeden Morgen trinke ich Kaffee.', english: 'Every morning I drink coffee.', highlight: 'trinke' },
+          { german: 'Heute bin ich müde.', english: 'Today I am tired.', highlight: 'bin' },
+          { german: 'In Berlin wohne ich seit zwei Jahren.', english: 'I have been living in Berlin for two years.', highlight: 'wohne' },
+        ],
+      },
+    ],
+    quiz: [
+      { id: 'so-q1', question: 'Which position does the verb always occupy in a main clause?', options: ['Position 1', 'Position 2', 'Position 3', 'At the end'], correct: 1, explanation: 'The V2 rule: the finite verb is always in second position.' },
+      { id: 'so-q2', question: 'Rearrange starting with "Heute": Heute / bin / ich / müde', options: ['Heute bin ich müde.', 'Heute ich bin müde.', 'Heute müde bin ich.', 'Heute ich müde bin.'], correct: 0, explanation: '"Heute" at pos. 1, verb "bin" at pos. 2, subject "ich" at pos. 3.' },
+      { id: 'so-q3', question: 'What is the correct order of adverbs (TeKaMoLo)?', options: ['Place → Time → Manner', 'Manner → Place → Time', 'Time → Manner → Place', 'Time → Place → Manner'], correct: 2, explanation: 'TeKaMoLo: Time → Cause → Manner → Place.' },
+      { id: 'so-q4', question: 'Which sentence has correct word order?', options: ['Ich fahre nach Berlin morgen.', 'Morgen ich fahre nach Berlin.', 'Morgen fahre ich nach Berlin.', 'Morgen nach Berlin fahre ich.'], correct: 2, explanation: '"Morgen" pos. 1, verb "fahre" pos. 2, subject "ich" pos. 3.' },
+      { id: 'so-q5', question: 'What happens to the subject when something else occupies position 1?', options: ['It disappears', 'It moves to position 3 (after the verb)', 'It stays at position 1', 'It goes to the end'], correct: 1, explanation: 'The subject shifts to position 3 (directly after the verb) in inverted word order.' },
+    ],
+  },
+  {
+    slug: 'w-questions',
+    title: 'W-Questions',
+    level: 'A1',
+    order: 9,
+    description: 'Ask who, what, where, when, how and why in German.',
+    icon: '❓',
+    xpReward: 50,
+    sections: [
+      {
+        type: 'explanation',
+        title: 'Question Words (Fragewörter)',
+        content: 'German question words are called "W-Fragen" because most start with W. The structure mirrors the V2 rule: Question word (pos. 1) → Verb (pos. 2) → Subject (pos. 3) → Rest. The verb always stays in second position.',
+      },
+      {
+        type: 'table',
+        title: 'The Essential W-Question Words',
+        table: {
+          headers: ['German', 'English', 'Example'],
+          rows: [
+            ['wer', 'who', 'Wer ist das? — Das ist Maria.'],
+            ['was', 'what', 'Was machst du? — Ich lerne Deutsch.'],
+            ['wo', 'where (location)', 'Wo wohnst du? — In Berlin.'],
+            ['woher', 'where from', 'Woher kommst du? — Aus Vietnam.'],
+            ['wohin', 'where to', 'Wohin fährst du? — Nach Wien.'],
+            ['wann', 'when', 'Wann beginnt der Kurs? — Um neun Uhr.'],
+            ['wie', 'how', 'Wie heißt du? — Ich heiße Lena.'],
+            ['warum', 'why', 'Warum lernst du Deutsch? — Für die Arbeit.'],
+            ['wie viele', 'how many', 'Wie viele Kinder hast du? — Zwei.'],
+            ['wie alt', 'how old', 'Wie alt bist du? — Ich bin 25.'],
+          ],
+        },
+      },
+      {
+        type: 'rule',
+        content: 'WORD ORDER: Question word (pos. 1) → Verb (pos. 2) → Subject (pos. 3) → Rest. When "wer" is itself the subject, no separate subject is needed: "Wer spricht Deutsch?" (verb follows directly).',
+      },
+      {
+        type: 'tip',
+        content: 'Distinguish wo / woher / wohin: "Wo" = static location (Wo ist er?). "Woher" = origin (Woher kommt er?). "Wohin" = destination (Wohin geht er?). Motion verbs go with woher/wohin; state verbs go with wo.',
+      },
+      {
+        type: 'examples',
+        examples: [
+          { german: 'Wie heißen Sie?', english: 'What is your name? (formal)', highlight: 'Wie' },
+          { german: 'Woher kommen Sie?', english: 'Where are you from? (formal)', highlight: 'Woher' },
+          { german: 'Wann fährt der Zug ab?', english: 'When does the train leave?', highlight: 'Wann' },
+          { german: 'Warum lernst du Deutsch?', english: 'Why are you learning German?', highlight: 'Warum' },
+          { german: 'Wie viele Sprachen sprichst du?', english: 'How many languages do you speak?', highlight: 'Wie viele' },
+        ],
+      },
+    ],
+    quiz: [
+      { id: 'wq-q1', question: 'How do you ask "Where are you from?"', options: ['Wo kommst du?', 'Woher kommst du?', 'Wohin kommst du?', 'Wann kommst du?'], correct: 1, explanation: '"Woher" asks about origin. "Woher kommst du?" = Where are you from?' },
+      { id: 'wq-q2', question: 'Which question word means "why"?', options: ['wie', 'wann', 'warum', 'wer'], correct: 2, explanation: '"Warum" = why.' },
+      { id: 'wq-q3', question: 'What position does the verb take in a W-question?', options: ['Position 1', 'Position 2', 'Position 3', 'At the end'], correct: 1, explanation: 'W-questions follow V2: question word at pos. 1, verb at pos. 2.' },
+      { id: 'wq-q4', question: 'Which word asks about destination?', options: ['wo', 'woher', 'wohin', 'wann'], correct: 2, explanation: '"Wohin" asks about destination: "Wohin fährst du?" = Where are you going?' },
+      { id: 'wq-q5', question: '"___ alt bist du?" — what fills the blank?', options: ['Was', 'Wie', 'Wann', 'Wer'], correct: 1, explanation: '"Wie alt" = how old. "Wie alt bist du?" = How old are you?' },
+    ],
+  },
   // ─── A2 ────────────────────────────────────────────────────────────────────
   {
     slug: 'accusative',

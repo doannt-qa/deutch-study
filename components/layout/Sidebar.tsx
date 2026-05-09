@@ -10,7 +10,6 @@ export function Sidebar() {
   const { t } = useLanguage()
 
   const navItems = [
-    { href: '/dashboard', label: t.nav.dashboard, icon: 'gauge' },
     { href: '/lessons', label: t.nav.lessons, icon: 'book-open' },
     { href: '/vocabulary', label: t.nav.vocabulary, icon: 'clone' },
     { href: '/exercises', label: t.nav.exercises, icon: 'dumbbell' },

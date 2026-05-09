@@ -10,7 +10,6 @@ export function BottomNav() {
   const { t } = useLanguage()
 
   const navItems = [
-    { href: '/dashboard', label: t.nav.home, icon: 'gauge' },
     { href: '/lessons', label: t.nav.lessons, icon: 'book-open' },
     { href: '/vocabulary', label: t.nav.words, icon: 'clone' },
     { href: '/exercises', label: t.nav.practice, icon: 'dumbbell' },
